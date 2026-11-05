@@ -1,0 +1,11 @@
+{
+  "name": "Note IINA",
+  "version": "1.0.1",
+  "identifier": "local.note-iina",
+  "author": { "name": "Note IINA" },
+  "description": "Ghi chú có mốc thời gian cho video và cuốn sổ course cục bộ.",
+  "entry": "main.js",
+  "globalEntry": "global.js",
+  "sidebarTab": { "name": "Ghi chú" },
+  "permissions": ["file-system", "show-alert"]
+}

@@ -1,0 +1,17 @@
+node_modules/
+*.iinaplgz
+.DS_Store
+.superpowers/
+.impeccable/cache/
+.impeccable/screenshots/
+
+# Machine-local tooling and private working history
+.agents/
+.omp/
+docs/superpowers/
+
+# Personal course notes and drafts
+.iina-notes.json
+.iina-notes.json.*
+drafts.json
+drafts.json.*

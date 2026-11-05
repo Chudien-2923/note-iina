@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Ghi chú</title>
+  <link rel="stylesheet" href="shared.css">
+  <script src="shared.js" defer></script>
+  <script src="sidebar.js" defer></script>
+</head>
+<body class="sidebar">
+  <header class="sidebar-header">
+    <div class="heading-row">
+      <h1>Ghi chú</h1>
+      <button id="close" type="button" aria-label="Đóng bảng ghi chú" title="Đóng bảng ghi chú (Escape)">Đóng</button>
+    </div>
+    <p id="video-title" class="video-title">Chưa mở video</p>
+    <div class="course-row">
+      <p id="course-name" class="secondary"></p>
+      <button id="open-course" type="button" disabled>Cuốn sổ course</button>
+    </div>
+  </header>
+  <main class="sidebar-content">
+    <p id="message" class="status-message" role="status">Đang kết nối với IINA…</p>
+    <p id="error" class="error-message" role="alert" hidden></p>
+    <p id="key-conflict" class="status-message" hidden></p>
+    <section id="course-choice" class="course-choice" aria-labelledby="course-choice-heading" hidden>
+      <h2 id="course-choice-heading">Chọn folder course</h2>
+      <p class="secondary">Ghi chú được lưu trong folder course. Bản nháp vẫn được giữ khi chưa chọn folder.</p>
+      <div class="choice-actions">
+        <button id="use-current" type="button">Dùng folder chứa video</button>
+        <button id="choose-course" type="button">Chọn folder khác…</button>
+      </div>
+    </section>
+    <section id="recovery" class="recovery" aria-label="Bản nháp có thể khôi phục" hidden></section>
+    <section class="current-notes" aria-labelledby="notes-heading">
+      <h2 id="notes-heading">Ghi chú của bài</h2>
+      <p id="notes-empty" class="empty-state">Mở một video local trong IINA để ghi chú.</p>
+      <div id="notes"></div>
+    </section>
+    <form id="composer" class="composer" aria-labelledby="editor-label">
+      <div class="heading-row">
+        <label id="editor-label" for="note-editor">Viết ghi chú</label>
+        <span id="draft-time" class="draft-time"></span>
+      </div>
+      <textarea id="note-editor" rows="5" placeholder="Viết lại điều mình hiểu…" aria-describedby="editor-help draft-status" disabled></textarea>
+      <div class="editor-actions">
+        <span id="editor-help" class="secondary">⌘ Enter để lưu · Enter xuống dòng</span>
+        <button id="save-note" class="primary" type="submit" disabled>Lưu</button>
+      </div>
+      <p id="draft-status" class="draft-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+</body>
+</html>

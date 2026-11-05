@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Cuốn sổ course</title>
+  <link rel="stylesheet" href="shared.css">
+  <script src="shared.js" defer></script>
+  <script src="notebook.js" defer></script>
+</head>
+<body class="notebook">
+  <header class="notebook-header">
+    <h1 id="course-title">Cuốn sổ course</h1>
+    <form id="search-form" class="search-form" role="search">
+      <label for="search">Tìm nội dung ghi chú</label>
+      <input id="search" type="search" placeholder="Tìm trong course" autocomplete="off" disabled>
+    </form>
+  </header>
+  <div class="notebook-layout">
+    <nav class="lesson-nav" aria-label="Bài có ghi chú">
+      <h2>Bài học</h2>
+      <button id="all-lessons" class="lesson-choice" type="button" aria-current="page" disabled>Tất cả bài</button>
+      <ul id="lessons" class="lesson-list"></ul>
+    </nav>
+    <main id="reader" class="reader" tabindex="-1" aria-labelledby="reader-title">
+      <h2 id="reader-title">Tất cả ghi chú</h2>
+      <p id="result-count" class="secondary" role="status" aria-live="polite"></p>
+      <p id="message" class="status-message" role="status">Đang kết nối với IINA…</p>
+      <p id="error" class="error-message" role="alert" hidden></p>
+      <section id="course-choice" class="course-choice" aria-labelledby="course-choice-heading" hidden>
+        <h2 id="course-choice-heading">Chọn folder course</h2>
+        <p class="secondary">Chọn folder chứa các bài học để mở và lưu ghi chú.</p>
+        <div class="choice-actions">
+          <button id="use-current" type="button">Dùng folder chứa video</button>
+          <button id="choose-course" type="button">Chọn folder khác…</button>
+        </div>
+      </section>
+      <p id="reader-empty" class="empty-state">Mở một video local và chọn course để đọc ghi chú.</p>
+      <div id="reader-notes"></div>
+    </main>
+  </div>
+</body>
+</html>
